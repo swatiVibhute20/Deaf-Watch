@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Feature</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+    <style>
+        .mic{
+            visibility: hidden;    
+            }
+    </style>
+ </head>
+ <body>
+   <!-- THE STARTING NAVBAR      -->
+    <header class="section-navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <!-- <img src="/img/Android Large - 7.png" alt="logo of website" width="80%" height="auto"> -->
+                </a>
+
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="index.html"> Home </a></li>
+                   <li class="nav-item"><a class="nav-link" href="about.html"> About </a></li>
+                   <li class="nav-item"><a class="nav-link" href="features.html"> Features</a></li>
+                   <li class="nav-item"><a class="nav-link" href="contact-us.html"> Contact Us </a></li>
+                   <li class="nav-item"><a class="nav-link" href="profile.html"> Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- END OF NAVBAR     -->
+
+     <!-- Start of future goals -->
+     <div class="section-savedDate">
+        <div> 
+            <!-- <h2>Animated Google Mic Icon</h2> -->
+            <div class="section-savedDate">
+                <div class="container">
+                    <h2 class="section-common-heading">Voice To Alerts</h2>
+                    <button id="start" class="btn-ai" onclick='displayMic()'>Start Listening</button>
+                    <button id="stop" class="btn-ai" onclick='hideMic()'>Stop Listening</button>
+                    <label id="text"></label>
+                </div>
+            </div>
+                <div class="mic">
+                    <span class="wave"></span>             
+                    <span class="head"></span>
+                    <span class="holder"></span>
+                    <span class="stand"></span>
+                </div>
+        </div>    
+
+        </div>
+    </div>
+
+
+        <div class="container-2" style="display: flex;flex-wrap: wrap;padding: 20px;">
+            
+            
+            <div id="imageContainer1" style="height:200px;width: 200px;"></div>
+            <div id="imageContainer2" style="height:200px;width: 200px"></div>
+            <div id="imageContainer3" style="height:200px;width: 200px"></div>
+            <div id="imageContainer4" style="height:200px;width: 200px"></div>
+            <div id="imageContainer5" style="height:200px;width: 200px"></div>
+               
+        </div>
+    
+   
+    
+
+     <!-- End of Future Goals -->
+
+
+
+    
+     <!-- Start of  contact home section  -->
+
+     
+    <div class="section-contact--homepage" id="section-contact--homepage">
+        <div class="container grid grid-two--cols">
+            <div class="contact-content">
+                <h2 class="contact-title">Let's Revolutionize the way you studied</h2>
+                <p>Join our free Bootcamps to know us better</p>
+                <div class="btn">
+                    <a href="contact-us.html" target="_blank">
+                        start now <i class="fa-regular fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-image">
+                <img src="img/amico.png" alt="guy with study">
+            </div>
+        </div>
+    </div>
+    
+     <!-- End of  contact home section  -->
+
+    <!-- Start of  Footer section  -->
+    <footer class="container grid grid-four--cols">
+        <div class="footer-1--div">
+            <div class="logo-brand">
+                <a href="index.html" class="footer-subheading">Deaf Watch</a>
+            </div>
+            <p>Let's Revolutionize the way you <br />study with Deaf Watch</p>
+    
+            <div class="social-footer--icons">
+                <a href="https://www.youtube.com/" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/mynetwork/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    
+        <div class="footer-2--div">
+            <p class="footer-subheading">Quick Links</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-3--div">
+            <p class="footer-subheading">Support</p>
+            <ul>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="contact-us.html">Help</a></li>
+                <li><a href="contact-us.html">FAQ</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-4--div">
+            <p class="footer-subheading">Services</p>
+            <ul>
+                <li><a href="features.html">Text Recognition</a></li>
+                <li><a href="features.html">Image Recognition</a></li>
+                <li><a href="features.html">Alerts</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+
+         <!-- End of  Footer section  -->
+
+<script>
+ function displayMic(){
+        console.log('display');
+        document.getElementsByClassName("mic")[0].style.visibility = 'visible';
+        document.getElementById('imageContainer1').innerHTML = "";
+        document.getElementById('imageContainer2').innerHTML = "";
+        document.getElementById('imageContainer3').innerHTML = "";
+        document.getElementById('imageContainer4').innerHTML = "";
+        document.getElementById('imageContainer1').innerHTML = "";
+    }
+    function hideMic(){
+        console.log('hide');
+        document.getElementsByClassName("mic")[0].style.visibility = 'hidden';
+    }
+var filteredTokens = [];
+const startBtn = document.querySelector("#start");
+const stopBtn = document.querySelector("#stop");
+const speakBtn = document.querySelector("#speak");
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+//sr start
+recognition.onstart = function() {
+    console.log("Speech recognition active.");
+}
+//sr result 
+
+recognition.onresult = function(event) {
+    console.log("in");
+    filteredTokens = []
+    let current = event.resultIndex;
+    if (event.results[current]) {
+        let transcript = event.results[current][0].transcript;
+        
+        // ab/c
+
+        
+        trials = tokenizeTextWithoutPunctuation(transcript);
+        console.log(trials[0
+    ]);
+        if(trials[0] ==  'alerts'){
+            document.getElementById('text').innerHTML = "Dog is Barking";
+        }
+        else if(trials[0] == 'search'){
+            document.getElementById('text').innerHTML = "Baby's Cry";
+        }
+        if(trials[0] == 'find'){
+            document.getElementById('text').innerHTML = "Bird's Chirping ";
+        }
+        const stopWords = new Set([
+            "my","this","hello","hello,","i","he","is","a", "am","an", "and", "are", "as", "at", "be", "by", "for", "from", "has", "he", "in", "is", "it", "its", "of", "on", "that", "the", "to", "was", "were", "will", "with"
+        ]);
+        
+
+        function tokenizeText(text) {
+            return text.toLowerCase().split(/\s+/);
+        }
+        
+
+        function removeStopWords(trials) {
+            return tokens.filter(token => !stopWords.has(token));
+        }
+        
+        // Example usage
+        const tokens = tokenizeText(transcript);
+        filteredTokens = removeStopWords(tokens);
+        console.log(filteredTokens+"filtered");
+        searchImages()
+        
+    }   
+}
+
+//sr stop
+recognition.onend = function() {
+    console.log("Speech recognition deactivated.");
+}
+recognition.continuous = true ;
+
+startBtn.addEventListener("click", () => {
+    recognition.start();
+});
+
+stopBtn.addEventListener("click", () => {
+    recognition.stop();
+});
+
+//speech 
+function readOut(message){
+    const speech = new SpeechSynthesisUtterance()
+    speech.text = message;
+    speech.volume = 1 
+    window.speechSynthesis.speak(speech)
+    console.log("speaking out")
+}
+
+
+function tokenizeTextWithoutPunctuation(text) {
+    // Split the text into words using whitespace as a delimiter
+    const words = text.toLowerCase().split(/\s+/);
+
+    // Define a regular expression pattern to match punctuation characters
+    const punctuationPattern = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+
+    // Remove punctuation characters from each word
+    const tokens = words.map(word => word.replace(punctuationPattern, ''));
+
+    // Filter out any empty strings resulting from punctuation removal
+    return tokens.filter(token => token.trim() !== '');
+}
+
+
+
+</script>
+
+
+</body>
+</html>
