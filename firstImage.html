@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Enter search term">
+    <button onclick="searchImages()">Search</button>
+
+    <div id="imageContainer"></div>
+    
+
+    <script>
+        function searchImages() {
+            var searchTerm1 = document.getElementById("searchInput").value;
+            var searchTerm1 = document.getElementById("searchInput").value;
+            var searchTerm1 = document.getElementById("searchInput").value;
+            var searchTerm1 = document.getElementById("searchInput").value;
+            var searchTerm1 = document.getElementById("searchInput").value;
+
+            fetch(`fetch_image.php?search=${searchTerm}`)
+                .then(response => response.json())
+                .then(data => {
+                    var imageSource = data.images_results[0].original;
+                    displayImage(imageSource);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function displayImage(imageSource) {
+            var imageContainer = document.getElementById("imageContainer");
+            imageContainer.innerHTML = `<img src="${imageSource}" salt="Image">`;
+            console.log(imageSource);
+        }
+    </script>
+</body>
+</html>
