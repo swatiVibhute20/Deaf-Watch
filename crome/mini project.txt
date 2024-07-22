@@ -1,4 +1,0 @@
-Regular js- arraw fun,callback,async : hitesh choudhary 
-react -hooks,rendering,navigation,props
-Django : programming with mosh
-svm , 
